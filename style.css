@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar .menu {
+    display: flex;
+}
+
+.navbar .menu-item {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.navbar .menu-item li {
+    margin: 0 15px;
+}
+
+.navbar .menu-item li a {
+    color: white;
+    text-decoration: none;
+}
+
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sticky-navbar {
+    background: #222;
+}
+
+.visible {
+    display: block;
+}
+
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+.typing-effect, .typing-effect-2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.carousel-container {
+    margin: 20px 0;
+}
+
+.item {
+    background: #eee;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin: 10px 0;
+    font-size: 18px;
+}
