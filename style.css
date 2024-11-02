@@ -1,18 +1,20 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light background for contrast */
 }
 
 .navbar {
     position: fixed;
     width: 100%;
-    background: #333;
+    background: rgba(51, 51, 51, 0.9); /* Semi-transparent background */
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px; /* Increased padding for a better look */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    transition: background 0.3s; /* Smooth transition */
 }
 
 .navbar .menu {
@@ -32,6 +34,12 @@ body {
 .navbar .menu-item li a {
     color: white;
     text-decoration: none;
+    font-weight: bold; /* Make the links bold */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.navbar .menu-item li a:hover {
+    color: #f39c12; /* Change color on hover */
 }
 
 .scroll-to-top-btn {
@@ -39,16 +47,23 @@ body {
     bottom: 20px;
     right: 20px;
     display: none;
-    background: #333;
+    background: #2980b9; /* Button background color */
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 15px; /* More padding for a better look */
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: background 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.scroll-to-top-btn:hover {
+    background: #3498db; /* Lighter shade on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
 }
 
 .sticky-navbar {
-    background: #222;
+    background: rgba(34, 34, 34, 0.9); /* Darker on scroll */
 }
 
 .visible {
@@ -58,15 +73,21 @@ body {
 section {
     padding: 100px 20px;
     text-align: center;
+    background: #ffffff; /* White background for sections */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px; /* Margin around sections */
 }
 
 h1, h2 {
     margin-bottom: 20px;
+    color: #2c3e50; /* Darker text color */
 }
 
 .typing-effect, .typing-effect-2 {
     font-size: 24px;
     font-weight: bold;
+    color: #34495e; /* Darker color for text */
 }
 
 .carousel-container {
@@ -78,6 +99,13 @@ h1, h2 {
     padding: 20px;
     text-align: center;
     border: 1px solid #ccc;
+    border-radius: 8px; /* Rounded corners for items */
+    transition: transform 0.3s; /* Smooth transform */
+}
+
+.item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Shadow on hover */
 }
 
 .skills-list {
@@ -88,4 +116,11 @@ h1, h2 {
 .skills-list li {
     margin: 10px 0;
     font-size: 18px;
+    color: #555; /* Slightly lighter color */
+}
+
+.skills-list li::before {
+    content: "✔️"; /* Check mark before each skill */
+    margin-right: 10px; /* Space between icon and text */
+    color: #27ae60; /* Green color for check mark */
 }
