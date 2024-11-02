@@ -1,57 +1,59 @@
 $(document).ready(function() {
     $(window).scroll(function() {
-        // sticky navbar on scroll script
+        // Sticky navbar on scroll
         if (this.scrollY > 20) {
             $('.navbar').addClass("sticky-navbar");
         } else {
             $('.navbar').removeClass("sticky-navbar");
         }
 
-        // scroll-up button show/hide script
+        // Show/hide scroll-up button
         if (this.scrollY > 500) {
-            $('.scroll-to-top-btn').addClass("visible");
+            $('.scroll-up-btn').addClass("visible");
         } else {
-            $('.scroll-to-top-btn').removeClass("visible");
+            $('.scroll-up-btn').removeClass("visible");
         }
     });
 
-    // slide-up script
-    $('.scroll-to-top-btn').click(function() {
-        $('html').animate({ scrollTop: 0 });
-        // removing smooth scroll on slide-up button click
+    // Scroll to top functionality
+    $('.scroll-up-btn').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 'smooth');
+        // Remove smooth scroll on button click
         $('html').css("scrollBehavior", "auto");
     });
 
-    $('.navbar .menu-item li a').click(function() {
-        // applying again smooth scroll on menu items click
-        $('html').css("scrollBehavior", "smooth");
-    });
-
-    // toggle menu/navbar script
-    $('.menu-btn').click(function() {
-        $('.navbar .menu-item').toggleClass("active-menu");
+    // Smooth scroll for menu items
+    $('.navbar .menu-btn').click(function() {
+        $('.navbar .menu').toggleClass("active-menu");
         $('.menu-btn i').toggleClass("active-icon");
     });
 
-    // typing text animation script
-    var textAnimation1 = new Typed(".typing-effect", {
+    // Smooth scrolling effect for menu links
+    $('.navbar .menu-item li a').click(function() {
+        // Smooth scroll on menu items click
+        $('html').css("scrollBehavior", "smooth");
+    });
+
+    // Typing text animation
+    new Typed(".typing", {
         strings: ["Web Developer.", "Trader."],
         typeSpeed: 80,
         backSpeed: 60,
         loop: true
     });
 
-    var textAnimation2 = new Typed(".typing-effect-2", {
+    new Typed(".typing-effect-2", {
         strings: ["Web Developer", "Trader"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
-    // owl carousel script
+    // Owl carousel initialization
     $('.carousel-container').owlCarousel({
         margin: 20,
         loop: true,
+        autoplay: true,
         autoplayTimeout: 2000,
         autoplayHoverPause: true,
         responsive: {
